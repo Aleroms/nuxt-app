@@ -1,11 +1,14 @@
 <template>
   <div>
-    <p>Product details for {{ id }}</p>
+    <ProductDetails :product="product" />
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 const { id } = useRoute().params;
+const uri = "https://fakestoreapi.com/products/" + id;
+//fetch product
+const { data: product } = await useFetch(uri, { key: id });
 definePageMeta({
   layout: "products",
 });
