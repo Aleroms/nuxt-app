@@ -9,6 +9,12 @@
         <p class="text-xl my-7">Price - ${{ product.price }}</p>
         <h3 class="font-bold border-b-2 mb-4 pb-2">Product description:</h3>
         <p class="mb-7">{{ product.description }}</p>
+        <button
+          class="bg-[#12b488] text-white px-3 py-2 rounded-md text-sm text-white; flex"
+        >
+          <i class="material-icons mr-2">add_shopping_cart</i>
+          <span>add to cart</span>
+        </button>
       </div>
     </div>
   </div>
